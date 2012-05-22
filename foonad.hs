@@ -3,8 +3,9 @@ printName(first, last) =
         then putStrLn ("Last name: " ++ last)
     else if last == ""
         then putStrLn ("First name: " ++ first)
-    else
-        putStrLn ("Full name: " ++ first ++ " " ++ last)
+    else do
+        putStrLn ("First name: " ++ first)
+        putStrLn ("Last name: " ++ last)
 
 main :: IO ()
 main = do 

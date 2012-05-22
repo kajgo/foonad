@@ -1,11 +1,7 @@
-printName(first, last) =
-    if first == ""
-        then putStrLn ("Last name: " ++ last)
-    else if last == ""
-        then putStrLn ("First name: " ++ first)
-    else do
-        putStrLn ("First name: " ++ first)
-        putStrLn ("Last name: " ++ last)
+matchFirst "" = ""
+matchFirst s = "First name: " ++ s
+matchLast "" = ""
+matchLast s = "Last name: " ++ s
 
 main :: IO ()
 main = do 
@@ -13,4 +9,5 @@ main = do
     first <- getLine
     putStrLn "Input last name:"
     last <- getLine
-    printName(first, last)
+    putStrLn(matchFirst first)
+    putStrLn(matchLast last)
